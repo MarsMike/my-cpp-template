@@ -8,6 +8,9 @@ RUN sudo apt-get update && sudo apt-get install -y build-essential cmake valgrin
         libsdl2-dev libsdl2-2.0-0 libjpeg-dev libwebp-dev libtiff5-dev libsdl2-image-dev libsdl2-image-2.0-0 libmikmod-dev libfishsound1-dev libsmpeg-dev liboggz2-dev libflac-dev libfluidsynth-dev libsdl2-mixer-dev libsdl2-mixer-2.0-0 libfreetype6-dev libsdl2-ttf-dev libsdl2-ttf-2.0-0
 RUN sudo pip install --system conan
 
+RUN pip install --user --upgrade conan
+RUN conan --version
+
 RUN echo 'export CC=clang' >> /home/gitpod/.bashrc
 #RUN echo 'export CC=gcc' >> /home/gitpod/.bashrc
 
